@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -9,386 +8,385 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-–gold: #D4A843;
-–gold-light: #EAC876;
-–gold-pale: #F5E4B8;
-–ivory: #FFFFFF;
-–ivory-warm: #FDFAF3;
-–ivory-section: #FAF7F0;
-–text: #1A1814;
-–text-mid: #5C5240;
-–text-light: #9A8A72;
-}
+  :root {
+    --gold: #D4A843;
+    --gold-light: #EAC876;
+    --gold-pale: #F5E4B8;
+    --ivory: #FFFFFF;
+    --ivory-warm: #FDFAF3;
+    --ivory-section: #FAF7F0;
+    --text: #1A1814;
+    --text-mid: #5C5240;
+    --text-light: #9A8A72;
+  }
 
-body {
-background: #F2EDE3;
-background-image:
-radial-gradient(ellipse at 15% 15%, rgba(212,168,67,0.15) 0%, transparent 50%),
-radial-gradient(ellipse at 85% 85%, rgba(212,168,67,0.10) 0%, transparent 50%);
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 32px 16px;
-font-family: ‘Jost’, sans-serif;
-}
+  body {
+    background: #F2EDE3;
+    background-image:
+      radial-gradient(ellipse at 15% 15%, rgba(212,168,67,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 85% 85%, rgba(212,168,67,0.10) 0%, transparent 50%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    font-family: 'Jost', sans-serif;
+  }
 
-.card {
-background: var(–ivory);
-max-width: 580px;
-width: 100%;
-position: relative;
-box-shadow:
-0 2px 4px rgba(0,0,0,0.04),
-0 8px 24px rgba(0,0,0,0.08),
-0 24px 64px rgba(180,140,60,0.12),
-0 0 0 1px rgba(212,168,67,0.25);
-}
+  .card {
+    background: var(--ivory);
+    max-width: 580px;
+    width: 100%;
+    position: relative;
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.04),
+      0 8px 24px rgba(0,0,0,0.08),
+      0 24px 64px rgba(180,140,60,0.12),
+      0 0 0 1px rgba(212,168,67,0.25);
+  }
 
-.card::before {
-content: ‘’;
-position: absolute;
-inset: 12px;
-border: 1px solid rgba(212,168,67,0.3);
-pointer-events: none;
-z-index: 5;
-}
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(212,168,67,0.3);
+    pointer-events: none;
+    z-index: 5;
+  }
 
-.corner {
-position: absolute;
-width: 32px;
-height: 32px;
-z-index: 6;
-}
-.corner svg { width: 100%; height: 100%; }
-.corner-tl { top: 8px; left: 8px; }
-.corner-tr { top: 8px; right: 8px; transform: scaleX(-1); }
-.corner-bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
-.corner-br { bottom: 8px; right: 8px; transform: scale(-1,-1); }
+  .corner {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    z-index: 6;
+  }
+  .corner svg { width: 100%; height: 100%; }
+  .corner-tl { top: 8px; left: 8px; }
+  .corner-tr { top: 8px; right: 8px; transform: scaleX(-1); }
+  .corner-bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+  .corner-br { bottom: 8px; right: 8px; transform: scale(-1,-1); }
 
-.header {
-background: linear-gradient(175deg, #FFFEF9 0%, #FEF9EE 50%, #FFFEF9 100%);
-padding: 56px 44px 48px;
-text-align: center;
-position: relative;
-border-bottom: 1px solid rgba(212,168,67,0.15);
-}
+  .header {
+    background: linear-gradient(175deg, #FFFEF9 0%, #FEF9EE 50%, #FFFEF9 100%);
+    padding: 56px 44px 48px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(212,168,67,0.15);
+  }
 
-.header-tag {
-display: inline-block;
-font-size: 10px;
-font-weight: 400;
-letter-spacing: 5px;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 24px;
-}
+  .header-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
 
-.header h1 {
-font-family: ‘Playfair Display’, serif;
-font-size: 44px;
-font-weight: 400;
-color: var(–text);
-line-height: 1.15;
-letter-spacing: 0.5px;
-margin-bottom: 6px;
-}
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
 
-.header h1 em {
-display: block;
-font-style: italic;
-color: var(–gold);
-font-size: 50px;
-}
+  .header h1 em {
+    display: block;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 50px;
+  }
 
-.laurea-badge {
-display: inline-block;
-margin-top: 22px;
-padding: 7px 22px;
-border: 1px solid var(–gold-light);
-color: var(–text-mid);
-font-size: 10px;
-letter-spacing: 4px;
-text-transform: uppercase;
-font-weight: 400;
-}
+  .laurea-badge {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 7px 22px;
+    border: 1px solid var(--gold-light);
+    color: var(--text-mid);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
 
-.details {
-padding: 40px 44px 32px;
-background: var(–ivory);
-}
+  .details {
+    padding: 40px 44px 32px;
+    background: var(--ivory);
+  }
 
-.details-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 24px 28px;
-margin-bottom: 28px;
-}
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 28px;
+    margin-bottom: 28px;
+  }
 
-.detail-item { text-align: center; }
+  .detail-item { text-align: center; }
 
-.detail-label {
-display: block;
-font-size: 9px;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–gold);
-font-weight: 500;
-margin-bottom: 6px;
-}
+  .detail-label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
 
-.detail-value {
-font-family: ‘Playfair Display’, serif;
-font-size: 19px;
-color: var(–text);
-line-height: 1.35;
-}
+  .detail-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--text);
+    line-height: 1.35;
+  }
 
-.map-link {
-display: inline-flex;
-align-items: center;
-gap: 4px;
-margin-top: 6px;
-font-size: 9px;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: var(–gold);
-text-decoration: none;
-font-weight: 500;
-border-bottom: 1px solid rgba(212,168,67,0.3);
-padding-bottom: 1px;
-}
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(212,168,67,0.3);
+    padding-bottom: 1px;
+  }
 
-.divider {
-display: flex;
-align-items: center;
-gap: 16px;
-margin: 28px 0;
-}
-.divider::before,
-.divider::after {
-content: ‘’;
-flex: 1;
-height: 1px;
-background: linear-gradient(90deg, transparent, #D4A843, transparent);
-opacity: 0.5;
-}
-.divider span {
-color: var(–gold);
-font-size: 14px;
-flex-shrink: 0;
-letter-spacing: 4px;
-}
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4A843, transparent);
+    opacity: 0.5;
+  }
+  .divider span {
+    color: var(--gold);
+    font-size: 14px;
+    flex-shrink: 0;
+    letter-spacing: 4px;
+  }
 
-.message {
-text-align: center;
-font-family: ‘Playfair Display’, serif;
-font-style: italic;
-font-size: 18px;
-color: var(–text-mid);
-line-height: 1.75;
-margin-bottom: 28px;
-}
+  .message {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
 
-.trattoria-block { text-align: center; padding: 4px 8px 12px; }
-.trattoria-label {
-display: block;
-font-size: 9px;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–gold);
-font-weight: 500;
-margin-bottom: 8px;
-}
-.trattoria-name {
-font-family: ‘Playfair Display’, serif;
-font-size: 21px;
-color: var(–text);
-display: block;
-margin-bottom: 4px;
-}
-.trattoria-sub {
-font-family: ‘Playfair Display’, serif;
-font-size: 14px;
-font-style: italic;
-color: var(–text-light);
-display: block;
-margin-bottom: 10px;
-}
+  .trattoria-block { text-align: center; padding: 4px 8px 12px; }
+  .trattoria-label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .trattoria-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: var(--text);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .trattoria-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 10px;
+  }
 
-.form-section {
-background: var(–ivory-section);
-padding: 36px 44px 48px;
-border-top: 1px solid rgba(212,168,67,0.15);
-}
+  .form-section {
+    background: var(--ivory-section);
+    padding: 36px 44px 48px;
+    border-top: 1px solid rgba(212,168,67,0.15);
+  }
 
-.form-title {
-text-align: center;
-font-size: 10px;
-letter-spacing: 4px;
-text-transform: uppercase;
-color: var(–gold);
-font-weight: 500;
-margin-bottom: 30px;
-}
+  .form-title {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
 
-.form-group { margin-bottom: 22px; }
+  .form-group { margin-bottom: 22px; }
 
-.field-label {
-display: block;
-font-size: 9px;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–text-light);
-font-weight: 500;
-margin-bottom: 8px;
-}
+  .field-label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
 
-input[type=“text”]#nome {
-width: 100%;
-background: transparent;
-border: none;
-border-bottom: 1.5px solid var(–gold-light);
-padding: 14px 0;
-font-family: ‘Playfair Display’, serif;
-font-size: 26px;
-font-style: italic;
-color: var(–text);
-outline: none;
-border-radius: 0;
--webkit-appearance: none;
-transition: border-color 0.2s;
-}
-input[type=“text”]#nome::placeholder { color: #CCC5B5; }
-input[type=“text”]#nome:focus { border-bottom-color: var(–gold); }
+  input[type="text"]#nome {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--gold-light);
+    padding: 14px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--text);
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: border-color 0.2s;
+  }
+  input[type="text"]#nome::placeholder { color: #CCC5B5; }
+  input[type="text"]#nome:focus { border-bottom-color: var(--gold); }
 
-.radio-row { display: flex; gap: 12px; }
+  .radio-row { display: flex; gap: 12px; }
 
-.radio-card { flex: 1; position: relative; }
-.radio-card input[type=“radio”] {
-position: absolute;
-opacity: 0;
-width: 0;
-height: 0;
-}
-.radio-card label {
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 14px 8px;
-background: var(–ivory);
-border: 1px solid rgba(212,168,67,0.35);
-cursor: pointer;
-font-family: ‘Playfair Display’, serif;
-font-size: 16px;
-color: var(–text-mid);
-letter-spacing: 0;
-text-transform: none;
-font-weight: 400;
-transition: all 0.2s;
-text-align: center;
-}
-.radio-card input[type=“radio”]:checked + label {
-background: var(–gold);
-border-color: var(–gold);
-color: #fff;
-}
+  .radio-card { flex: 1; position: relative; }
+  .radio-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .radio-card label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 8px;
+    background: var(--ivory);
+    border: 1px solid rgba(212,168,67,0.35);
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--text-mid);
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 400;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .radio-card input[type="radio"]:checked + label {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+  }
 
-select {
-width: 100%;
-background: var(–ivory);
-border: 1px solid rgba(212,168,67,0.35);
-border-bottom: 1.5px solid var(–gold-light);
-padding: 13px 36px 13px 14px;
-font-family: ‘Playfair Display’, serif;
-font-size: 18px;
-color: var(–text);
-outline: none;
-border-radius: 0;
--webkit-appearance: none;
-cursor: pointer;
-background-image: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘7’ viewBox=‘0 0 12 7’%3E%3Cpath d=‘M1 1l5 5 5-5’ stroke=’%23D4A843’ stroke-width=‘1.5’ fill=‘none’ stroke-linecap=‘round’/%3E%3C/svg%3E”);
-background-repeat: no-repeat;
-background-position: right 14px center;
-}
+  select {
+    width: 100%;
+    background: var(--ivory);
+    border: 1px solid rgba(212,168,67,0.35);
+    border-bottom: 1.5px solid var(--gold-light);
+    padding: 13px 36px 13px 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--text);
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D4A843' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
 
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-textarea {
-width: 100%;
-background: var(–ivory);
-border: 1px solid rgba(212,168,67,0.3);
-border-bottom: 1.5px solid var(–gold-light);
-padding: 13px 14px;
-font-family: ‘Playfair Display’, serif;
-font-size: 17px;
-font-style: italic;
-color: var(–text);
-outline: none;
-border-radius: 0;
-resize: none;
-min-height: 80px;
--webkit-appearance: none;
-}
-textarea::placeholder { color: #CCC5B5; }
+  textarea {
+    width: 100%;
+    background: var(--ivory);
+    border: 1px solid rgba(212,168,67,0.3);
+    border-bottom: 1.5px solid var(--gold-light);
+    padding: 13px 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--text);
+    outline: none;
+    border-radius: 0;
+    resize: none;
+    min-height: 80px;
+    -webkit-appearance: none;
+  }
+  textarea::placeholder { color: #CCC5B5; }
 
-#extra-fields { display: none; animation: fadeIn 0.35s ease; }
+  #extra-fields { display: none; animation: fadeIn 0.35s ease; }
 
-.btn-submit {
-display: block;
-width: 100%;
-margin-top: 30px;
-padding: 16px;
-background: linear-gradient(135deg, #C49A35 0%, #E8C05A 50%, #C49A35 100%);
-background-size: 200% 100%;
-border: none;
-color: #1A1408;
-font-family: ‘Jost’, sans-serif;
-font-size: 11px;
-font-weight: 500;
-letter-spacing: 4px;
-text-transform: uppercase;
-cursor: pointer;
-box-shadow: 0 4px 20px rgba(212,168,67,0.3);
-transition: background-position 0.4s, box-shadow 0.3s, opacity 0.2s;
-}
-.btn-submit:hover { background-position: right center; box-shadow: 0 6px 28px rgba(212,168,67,0.5); }
-.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+  .btn-submit {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    background: linear-gradient(135deg, #C49A35 0%, #E8C05A 50%, #C49A35 100%);
+    background-size: 200% 100%;
+    border: none;
+    color: #1A1408;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212,168,67,0.3);
+    transition: background-position 0.4s, box-shadow 0.3s, opacity 0.2s;
+  }
+  .btn-submit:hover { background-position: right center; box-shadow: 0 6px 28px rgba(212,168,67,0.5); }
+  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
-.success-msg { display: none; text-align: center; padding: 48px 24px; animation: fadeIn 0.6s ease; }
-.success-msg .check { font-size: 44px; color: var(–gold); margin-bottom: 18px; }
-.success-msg h3 { font-family: ‘Playfair Display’, serif; font-size: 32px; font-style: italic; color: var(–text); margin-bottom: 10px; }
-.success-msg p { font-size: 13px; color: var(–text-light); letter-spacing: 1px; line-height: 1.7; }
+  .success-msg { display: none; text-align: center; padding: 48px 24px; animation: fadeIn 0.6s ease; }
+  .success-msg .check { font-size: 44px; color: var(--gold); margin-bottom: 18px; }
+  .success-msg h3 { font-family: 'Playfair Display', serif; font-size: 32px; font-style: italic; color: var(--text); margin-bottom: 10px; }
+  .success-msg p { font-size: 13px; color: var(--text-light); letter-spacing: 1px; line-height: 1.7; }
 
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(-8px); }
-to   { opacity: 1; transform: translateY(0); }
-}
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
-.footer {
-text-align: center;
-padding: 18px;
-font-size: 10px;
-letter-spacing: 3px;
-color: var(–gold);
-text-transform: uppercase;
-background: var(–ivory-section);
-border-top: 1px solid rgba(212,168,67,0.15);
-}
+  .footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    background: var(--ivory-section);
+    border-top: 1px solid rgba(212,168,67,0.15);
+  }
 
-@media (max-width: 500px) {
-.header { padding: 44px 28px 38px; }
-.header h1 { font-size: 34px; }
-.header h1 em { font-size: 38px; }
-.details { padding: 32px 28px 24px; }
-.details-grid { grid-template-columns: 1fr; gap: 20px; }
-.form-section { padding: 32px 28px 44px; }
-.two-col { grid-template-columns: 1fr; }
-input[type=“text”]#nome { font-size: 22px; }
-}
+  @media (max-width: 500px) {
+    .header { padding: 44px 28px 38px; }
+    .header h1 { font-size: 34px; }
+    .header h1 em { font-size: 38px; }
+    .details { padding: 32px 28px 24px; }
+    .details-grid { grid-template-columns: 1fr; gap: 20px; }
+    .form-section { padding: 32px 28px 44px; }
+    .two-col { grid-template-columns: 1fr; }
+    input[type="text"]#nome { font-size: 22px; }
+  }
 </style>
-
 </head>
 <body>
 
@@ -434,103 +432,97 @@ input[type=“text”]#nome { font-size: 22px; }
       </div>
     </div>
 
-```
-<div class="divider"><span>✦</span></div>
+    <div class="divider"><span>✦</span></div>
 
-<p class="message">
-  Ho il piacere di invitarti a condividere con me<br>questo giorno così speciale.
-</p>
+    <p class="message">
+      Ho il piacere di invitarti a condividere con me<br>questo giorno così speciale.
+    </p>
 
-<div class="divider"><span>✦</span></div>
+    <div class="divider"><span>✦</span></div>
 
-<div class="trattoria-block">
-  <span class="trattoria-label">A seguire</span>
-  <span class="trattoria-name">Pranzo alla «Trattoria del Cavaliere»</span>
-  <span class="trattoria-sub">Vi aspetto a tavola per festeggiare insieme</span>
-  <a class="map-link" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x1313e32c501fce53:0x4b5829bb934b2e2?entry=s&hl=it" target="_blank">📍 Apri su Maps</a>
-</div>
-```
-
+    <div class="trattoria-block">
+      <span class="trattoria-label">A seguire</span>
+      <span class="trattoria-name">Pranzo alla «Trattoria del Cavaliere»</span>
+      <span class="trattoria-sub">Vi aspetto a tavola per festeggiare insieme</span>
+      <a class="map-link" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x1313e32c501fce53:0x4b5829bb934b2e2?entry=s&hl=it" target="_blank">📍 Apri su Maps</a>
+    </div>
   </div>
 
   <div class="form-section">
     <p class="form-title">— Conferma la tua presenza —</p>
 
-```
-<div id="rsvp-form">
+    <div id="rsvp-form">
 
-  <div class="form-group">
-    <span class="field-label">Il tuo nome e cognome</span>
-    <input type="text" id="nome" name="nome" placeholder="Nome Cognome" autocomplete="name">
-  </div>
-
-  <div class="form-group">
-    <span class="field-label">Parteciperai?</span>
-    <div class="radio-row">
-      <div class="radio-card">
-        <input type="radio" name="presenza" value="si" id="si">
-        <label for="si">✓ Sì, ci sarò</label>
-      </div>
-      <div class="radio-card">
-        <input type="radio" name="presenza" value="no" id="no">
-        <label for="no">✗ Non posso</label>
-      </div>
-    </div>
-  </div>
-
-  <div id="extra-fields">
-    <div class="form-group">
-      <span class="field-label">Verrai al festeggiamento?</span>
-      <select id="festeggiamento" name="festeggiamento">
-        <option value="">— Seleziona —</option>
-        <option value="si">Sì</option>
-        <option value="proclamazione">Solo proclamazione</option>
-        <option value="ristorante">Solo ristorante</option>
-      </select>
-    </div>
-
-    <div class="two-col">
       <div class="form-group">
-        <span class="field-label">Numero adulti</span>
-        <select id="adulti" name="adulti">
-          <option value="">—</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
+        <span class="field-label">Il tuo nome e cognome</span>
+        <input type="text" id="nome" name="nome" placeholder="Nome Cognome" autocomplete="name">
       </div>
+
       <div class="form-group">
-        <span class="field-label">Numero bambini</span>
-        <select id="bambini" name="bambini">
-          <option value="">—</option>
-          <option value="0">Nessuno</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
+        <span class="field-label">Parteciperai?</span>
+        <div class="radio-row">
+          <div class="radio-card">
+            <input type="radio" name="presenza" value="si" id="si">
+            <label for="si">✓ Sì, ci sarò</label>
+          </div>
+          <div class="radio-card">
+            <input type="radio" name="presenza" value="no" id="no">
+            <label for="no">✗ Non posso</label>
+          </div>
+        </div>
       </div>
+
+      <div id="extra-fields">
+        <div class="form-group">
+          <span class="field-label">Verrai al festeggiamento?</span>
+          <select id="festeggiamento" name="festeggiamento">
+            <option value="">— Seleziona —</option>
+            <option value="si">Sì</option>
+            <option value="proclamazione">Solo proclamazione</option>
+            <option value="ristorante">Solo ristorante</option>
+          </select>
+        </div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <span class="field-label">Numero adulti</span>
+            <select id="adulti" name="adulti">
+              <option value="">—</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="field-label">Numero bambini</span>
+            <select id="bambini" name="bambini">
+              <option value="">—</option>
+              <option value="0">Nessuno</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <span class="field-label">Note / Intolleranze alimentari</span>
+          <textarea id="note" name="note" placeholder="Allergie, esigenze alimentari, o un pensiero per me..."></textarea>
+        </div>
+      </div>
+
+      <button class="btn-submit" onclick="inviaRSVP()">Invia la tua risposta</button>
     </div>
 
-    <div class="form-group">
-      <span class="field-label">Note / Intolleranze alimentari</span>
-      <textarea id="note" name="note" placeholder="Allergie, esigenze alimentari, o un pensiero per me..."></textarea>
+    <div class="success-msg" id="success">
+      <div class="check">✦</div>
+      <h3>Grazie mille!</h3>
+      <p>Ho ricevuto la tua risposta.<br>Non vedo l'ora di festeggiare con te.</p>
     </div>
-  </div>
-
-  <button class="btn-submit" onclick="inviaRSVP()">Invia la tua risposta</button>
-</div>
-
-<div class="success-msg" id="success">
-  <div class="check">✦</div>
-  <h3>Grazie mille!</h3>
-  <p>Ho ricevuto la tua risposta.<br>Non vedo l'ora di festeggiare con te.</p>
-</div>
-```
-
   </div>
 
   <div class="footer">Con affetto &nbsp;·&nbsp; Francesco Di Pasquale</div>
@@ -584,6 +576,5 @@ input[type=“text”]#nome { font-size: 22px; }
     }
   }
 </script>
-
 </body>
 </html>
